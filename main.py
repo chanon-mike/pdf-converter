@@ -17,7 +17,7 @@ window.grid_columnconfigure(0, weight=1)
 def upload_files():
     global file_path
     file_path = askopenfilenames(filetypes=[('PDF Files', '*pdf')])
-    if file_path is not None:
+    if file_path:
         Label(window, text='Files Uploaded Successfully!', foreground='green', font=("Open Sans", 10)).grid(row=2, pady=10)
         pdf_to_text_btn.config(state=NORMAL)
         language_list_label.config(state=NORMAL)
